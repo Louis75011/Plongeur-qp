@@ -1,0 +1,7 @@
+{
+  "name": "Quentin Pironi - Professional Diver & Rope Access Specialist",
+  "description": "Portfolio of Quentin Pironi, IMCA Air Diver, IRATA Rope Access Technician, and NDT Specialist based in Caen, France.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
