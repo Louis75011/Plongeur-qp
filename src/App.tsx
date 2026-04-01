@@ -16,45 +16,46 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 
 const certifications = [
-  { name: "IMCA Air Diver 2A", icon: Waves, description: "International Marine Contractors Association certification for surface supplied diving." },
-  { name: "IRATA Level 1", icon: Shield, description: "Industrial Rope Access Trade Association certification for high-altitude work." },
-  { name: "NDT Specialist", icon: Award, description: "Non-Destructive Testing (Lloyd's Register) for structural integrity assessment." },
-  { name: "BOSIET / CATEC", icon: HardHat, description: "Offshore safety and confined space entry certifications." }
+  { name: "IMCA Air Diver 2A", icon: Waves, description: "Certification de l'International Marine Contractors Association pour la plongée à l'air." },
+  { name: "IRATA Niveau 1", icon: Shield, description: "Certification de l'Industrial Rope Access Trade Association pour les travaux en hauteur." },
+  { name: "Spécialiste NDT", icon: Award, description: "Contrôles Non Destructifs (Lloyd's Register) pour l'inspection de structures." },
+  { name: "BOSIET / CATEC", icon: HardHat, description: "Certifications de sécurité offshore et d'intervention en espaces confinés." }
 ];
 
 const experiences = [
   {
     company: "PETRODIVE",
     role: "Scaphandrier Offshore Air Diver NDT & Cordiste IRATA",
-    period: "Dec 2025 - Mar 2026",
-    location: "Cameroon",
-    description: "Offshore diving operations, non-destructive testing, and rope access maintenance."
+    period: "Déc 2025 - Mars 2026",
+    location: "Cameroun",
+    description: "Opérations de plongée offshore, contrôles non destructifs et maintenance sur cordes."
   },
   {
     company: "Ulis Group",
     role: "Scaphandrier",
     period: "Oct 2025 - Nov 2025",
-    location: "Benin",
-    description: "Submarine works and coastal infrastructure maintenance."
+    location: "Bénin",
+    description: "Travaux sous-marins et maintenance d'infrastructures portuaires."
   },
   {
     company: "CAPEFRONT Energies",
     role: "Scaphandrier Offshore Air Diver",
-    period: "Jun 2025 - Sep 2025",
+    period: "Juin 2025 - Sept 2025",
     location: "Congo",
-    description: "Deep sea diving operations for energy infrastructure."
+    description: "Opérations de plongée profonde pour les infrastructures énergétiques."
   },
   {
     company: "Triangle Interim",
     role: "Scaphandrier",
-    period: "Dec 2024 - May 2025",
+    period: "Déc 2024 - Mai 2025",
     location: "France",
-    description: "Civil engineering and underwater construction projects."
+    description: "Génie civil et projets de construction sous-marine."
   }
 ];
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const linkedinUrl = "https://www.linkedin.com/in/quentin-pironi-686989335/";
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-blue-500/30">
@@ -69,9 +70,9 @@ export default function App() {
           </div>
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-white/60">
-            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#about" className="hover:text-white transition-colors">À propos</a>
             <a href="#expertise" className="hover:text-white transition-colors">Expertise</a>
-            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
+            <a href="#experience" className="hover:text-white transition-colors">Expérience</a>
             <a href="#contact" className="px-5 py-2 bg-white text-black rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">Contact</a>
           </div>
 
@@ -81,7 +82,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Menu Mobile */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
@@ -91,22 +92,22 @@ export default function App() {
             className="fixed inset-0 z-40 bg-black pt-24 px-6 md:hidden"
           >
             <div className="flex flex-col gap-6 text-2xl font-bold">
-              <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="#about" onClick={() => setIsMenuOpen(false)}>À propos</a>
               <a href="#expertise" onClick={() => setIsMenuOpen(false)}>Expertise</a>
-              <a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a>
+              <a href="#experience" onClick={() => setIsMenuOpen(false)}>Expérience</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Section Hero */}
+      <section id="about" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-[#0a0a0a] z-10" />
           <img 
             src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=2070" 
-            alt="Underwater Professional" 
+            alt="Professionnel sous-marin" 
             className="w-full h-full object-cover scale-105"
             referrerPolicy="no-referrer"
           />
@@ -119,22 +120,22 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400">
-              Normandie, France
+              Caen, Normandie, France
             </span>
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 uppercase leading-none">
               Quentin <span className="text-blue-600">Pironi</span>
             </h1>
             <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
-              IMCA Air Diver 2A • IRATA Rope Access • NDT Specialist
+              IMCA Air Diver 2A • Cordiste IRATA • Spécialiste NDT
               <br />
-              Expertise in offshore operations and high-access industrial maintenance.
+              Expertise en opérations offshore et maintenance industrielle en accès difficile.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
-                Get in Touch
+                Me Contacter
               </a>
               <a href="#experience" className="w-full sm:w-auto px-8 py-4 border border-white/20 font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-all duration-300">
-                View Portfolio
+                Voir l'Expérience
               </a>
             </div>
           </motion.div>
@@ -145,16 +146,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* Section Expertise */}
       <section id="expertise" className="py-32 bg-[#0d0d0d]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">
-                Technical <span className="text-blue-600">Expertise</span>
+                Expertise <span className="text-blue-600">Technique</span>
               </h2>
               <p className="text-white/50 text-lg">
-                Certified specialist in underwater operations and rope access, delivering precision in the most challenging environments.
+                Spécialiste certifié en opérations sous-marines et accès sur cordes, garantissant précision et sécurité dans les environnements les plus exigeants.
               </p>
             </div>
             <div className="text-right hidden md:block">
@@ -180,16 +181,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Section Expérience */}
       <section id="experience" className="py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">
-                Operational <span className="text-blue-600">History</span>
+                Parcours <span className="text-blue-600">Opérationnel</span>
               </h2>
               <p className="text-white/50 text-lg">
-                A track record of successful missions across Africa and Europe, specializing in offshore energy and civil infrastructure.
+                Une solide expérience de missions réussies en Afrique et en Europe, spécialisée dans l'énergie offshore et les infrastructures civiles.
               </p>
             </div>
             <div className="text-right hidden md:block">
@@ -239,7 +240,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Section CTA */}
       <section id="contact" className="py-32 bg-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
@@ -247,10 +248,10 @@ export default function App() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-10 leading-none">
-            Ready for the <br /> Next Mission?
+            Prêt pour la <br /> Prochaine Mission ?
           </h2>
           <p className="text-white/80 text-xl max-w-2xl mx-auto mb-12 font-medium">
-            Available for offshore contracts, industrial maintenance, and specialized technical interventions worldwide.
+            Disponible pour contrats offshore, maintenance industrielle et interventions techniques spécialisées dans le monde entier.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
@@ -258,23 +259,23 @@ export default function App() {
               className="group flex items-center gap-3 px-10 py-5 bg-black text-white font-bold uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-all duration-300"
             >
               <Mail size={20} />
-              Send Email
+              Envoyer un Email
               <ChevronRight className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={linkedinUrl}
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-10 py-5 border-2 border-black/20 text-black font-bold uppercase tracking-widest rounded-full hover:bg-black/10 transition-all duration-300"
             >
               <ExternalLink size={20} />
-              LinkedIn Profile
+              Profil LinkedIn
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Pied de page */}
       <footer className="py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
@@ -282,11 +283,11 @@ export default function App() {
             <span className="font-bold uppercase tracking-tighter">Quentin Pironi</span>
           </div>
           <p className="text-white/30 text-sm">
-            © {new Date().getFullYear()} Quentin Pironi. All rights reserved. Professional Diver & Rope Access.
+            © {new Date().getFullYear()} Quentin Pironi. Tous droits réservés. Scaphandrier Pro & Travaux sur Cordes.
           </p>
           <div className="flex items-center gap-6 text-white/40 text-xs uppercase font-bold tracking-widest">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
+            <a href="#" className="hover:text-white transition-colors">Conditions</a>
           </div>
         </div>
       </footer>
